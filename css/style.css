@@ -10,6 +10,7 @@
 #leftside .imgbox {
   display: flex;
   justify-content: center;
+  padding: 100px 0px;
 }
 
 #rightside {
