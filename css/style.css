@@ -1,0 +1,46 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#leftside {
+  background-color: rgb(0, 145, 145);
+  width: 75%;
+  height: 100vh;
+}
+#leftside .imgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#rightside {
+  background-color: rgb(194, 132, 142);
+  width: 25%;
+  height: 100vh;
+}
+#rightside .sizes p {
+  text-align: center;
+}
+#rightside .sizes input {
+  margin: 0px 15px;
+}
+#rightside .products {
+  text-align: center;
+}
+#rightside .products1 {
+  width: 80%;
+  margin: auto;
+}
+#rightside .products1 img {
+  width: 20%;
+  height: 50px;
+}
+#rightside .products2 {
+  padding: 50px 0px;
+  width: 80%;
+  margin: auto;
+}
+#rightside .products2 img {
+  width: 20%;
+  height: 50px;
+}/*# sourceMappingURL=style.css.map */
