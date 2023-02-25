@@ -4,7 +4,6 @@ sizes.forEach(crust => {
     crust.onclick = sizeHandler
 })
 
-
 function sizeHandler(e) {
     value = e.target.getAttribute("value")
     switch (value) {
