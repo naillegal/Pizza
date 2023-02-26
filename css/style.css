@@ -10,7 +10,7 @@
 #leftside .imgbox {
   display: flex;
   justify-content: center;
-  padding: 100px 0px;
+  padding: 50px 0px;
 }
 
 #rightside {
@@ -18,29 +18,59 @@
   width: 25%;
   height: 100vh;
 }
-#rightside .sizes p {
+#rightside .sizes {
   text-align: center;
 }
 #rightside .sizes input {
   margin: 0px 15px;
 }
-#rightside .products {
+#rightside .sauce {
+  background-color: #0560aa;
+  color: white;
+  width: 50%;
+  padding: 20px;
+  border-radius: 20px;
+}
+#rightside .cheese {
+  border-radius: 20px;
+  background-color: #ffce00;
+  width: 50%;
+}
+#rightside .meats {
+  background-color: #8F00FF;
+  color: white;
+  width: 50%;
+  border-radius: 20px;
+  padding: 20px;
+}
+#rightside .veggies {
+  background-color: #FF8A00;
+  border-radius: 20px;
+  width: 50%;
+}
+#rightside .underbox {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+#rightside .underbox .box {
   text-align: center;
 }
-#rightside .products1 {
-  width: 80%;
-  margin: auto;
+#rightside .underbox img {
+  width: 15%;
 }
-#rightside .products1 img {
-  width: 20%;
-  height: 50px;
+#rightside .underbox .chefbox img {
+  width: 100%;
+  height: 50vh;
 }
-#rightside .products2 {
-  padding: 50px 0px;
-  width: 80%;
-  margin: auto;
+#rightside .underbox .saucebox {
+  display: none;
 }
-#rightside .products2 img {
-  width: 20%;
-  height: 50px;
+#rightside .underbox .cheesebox {
+  display: none;
+}
+#rightside .underbox .meatsbox {
+  display: none;
+}
+#rightside .underbox .veggiesbox {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

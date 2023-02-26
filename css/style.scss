@@ -8,7 +8,7 @@
   .imgbox {
     display: flex;
     justify-content: center;
-    padding:100px 0px;
+    padding: 50px 0px;
   }
 }
 #rightside {
@@ -16,31 +16,62 @@
   width: 25%;
   height: 100vh;
   .sizes {
-    p {
-      text-align: center;
-    }
+    text-align: center;
     input {
       margin: 0px 15px;
     }
   }
-  .products {
-    text-align: center;
+  .sauce {
+    background-color: #0560aa;
+    color: white;
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
   }
-  .products1 {
-    width: 80%;
-    margin: auto;
-    img {
-      width: 20%;
-      height: 50px;
+  .cheese {
+    border-radius: 20px;
+    background-color: #ffce00;
+    width: 50%;
+  }
+  .meats {
+    background-color: #8F00FF;
+    color: white;
+    width: 50%;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .veggies {
+    background-color:#FF8A00;
+    border-radius: 20px;
+    width: 50%;
+  }
+  .underbox{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    .box{
+      text-align: center;
+    }
+    img{
+      width: 15%;
+    }
+    .chefbox{
+      // display: none;
+    img{
+      width: 100%;
+      height: 50vh;
     }
   }
-  .products2 {
-    padding: 50px 0px;
-    width: 80%;
-    margin: auto;
-    img {
-      width: 20%;
-      height: 50px;
-    }
+  .saucebox{
+    display: none;
   }
+  .cheesebox{
+    display: none;
+  }
+  .meatsbox{
+    display: none;
+  }
+  .veggiesbox{
+    display: none;
+  }
+}
 }
