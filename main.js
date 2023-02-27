@@ -66,3 +66,24 @@ veggies.onclick = function () {
     chefbox.style.display = 'none'
     soundeffect.play()
 }
+
+const logo = document.querySelector('.logo')
+const courier = document.querySelector('.courier')
+const completed = document.querySelector('.completed')
+const imgbox = document.querySelector('.imgbox')
+const couriersound = new Audio('couriersound.mp3')
+const completedsound = new Audio('completedsound.mp3')
+
+logo.onclick = function () {
+    imgbox.style.display = 'none'
+    logo.style.display = 'none'
+    couriersound.play()
+    setTimeout(() => {
+        courier.style.display = 'block'
+    }, 2000);
+    setTimeout(() => {
+        courier.style.display = 'none'
+        completed.style.display = 'block'
+        completedsound.play()
+    }, 7000);
+}

@@ -5,6 +5,21 @@
   background-color:#387700;
   width: 75%;
   height: 100vh;
+  .logo{
+    position: absolute;
+    img{
+      width: 30%;
+    }
+  }
+  .courier{
+    display: none;
+  }
+  .completed{
+    display: none;
+    img{
+      height: 100vh;
+    }
+  }
   .imgbox {
     display: flex;
     justify-content: center;

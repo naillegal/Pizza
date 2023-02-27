@@ -7,6 +7,21 @@
   width: 75%;
   height: 100vh;
 }
+#leftside .logo {
+  position: absolute;
+}
+#leftside .logo img {
+  width: 30%;
+}
+#leftside .courier {
+  display: none;
+}
+#leftside .completed {
+  display: none;
+}
+#leftside .completed img {
+  height: 100vh;
+}
 #leftside .imgbox {
   display: flex;
   justify-content: center;
