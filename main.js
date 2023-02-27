@@ -21,6 +21,7 @@ function sizeHandler(e) {
             break
     }
 }
+const soundeffect = new Audio('soundeffect.mp3')
 const chefbox = document.querySelector('.chefbox')
 const sauce = document.querySelector('.sauce')
 const saucebox = document.querySelector('.saucebox')
@@ -30,6 +31,7 @@ sauce.onclick = function () {
     meatsbox.style.display = 'none'
     veggiesbox.style.display = 'none'
     chefbox.style.display = 'none'
+    soundeffect.play()
 }
 
 const cheese = document.querySelector('.cheese')
@@ -40,6 +42,7 @@ cheese.onclick = function () {
     meatsbox.style.display = 'none'
     veggiesbox.style.display = 'none'
     chefbox.style.display = 'none'
+    soundeffect.play()
 }
 
 const meats = document.querySelector('.meats')
@@ -50,6 +53,7 @@ meats.onclick = function () {
     meatsbox.style.display = 'block'
     veggiesbox.style.display = 'none'
     chefbox.style.display = 'none'
+    soundeffect.play()
 }
 
 const veggies = document.querySelector('.veggies')
@@ -60,4 +64,5 @@ veggies.onclick = function () {
     meatsbox.style.display = 'none'
     veggiesbox.style.display = 'block'
     chefbox.style.display = 'none'
+    soundeffect.play()
 }

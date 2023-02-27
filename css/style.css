@@ -3,18 +3,18 @@
 }
 
 #leftside {
-  background-color: rgb(0, 145, 145);
+  background-color: #387700;
   width: 75%;
   height: 100vh;
 }
 #leftside .imgbox {
   display: flex;
   justify-content: center;
-  padding: 50px 0px;
 }
 
 #rightside {
-  background-color: rgb(194, 132, 142);
+  border-left: 1px solid black;
+  background-color: rgba(255, 0, 0, 0.596);
   width: 25%;
   height: 100vh;
 }
@@ -30,11 +30,13 @@
   width: 50%;
   padding: 20px;
   border-radius: 20px;
+  border: 1px solid black;
 }
 #rightside .cheese {
   border-radius: 20px;
   background-color: #ffce00;
   width: 50%;
+  border: 1px solid black;
 }
 #rightside .meats {
   background-color: #8F00FF;
@@ -42,11 +44,13 @@
   width: 50%;
   border-radius: 20px;
   padding: 20px;
+  border: 1px solid black;
 }
 #rightside .veggies {
   background-color: #FF8A00;
   border-radius: 20px;
   width: 50%;
+  border: 1px solid black;
 }
 #rightside .underbox {
   font-family: Arial, Helvetica, sans-serif;
