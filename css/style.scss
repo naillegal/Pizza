@@ -23,6 +23,9 @@
   .imgbox {
     display: flex;
     justify-content: center;
+    .pizza{
+      transition: 0.2s ease-in-out;
+    }
   }
 }
 #rightside {
@@ -69,9 +72,9 @@
     font-weight: bold;
     .box{
       text-align: center;
-    }
-    img{
-      width: 15%;
+      img{
+        width: 15%;
+      }
     }
     .chefbox{
       // display: none;

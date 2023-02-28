@@ -26,6 +26,9 @@
   display: flex;
   justify-content: center;
 }
+#leftside .imgbox .pizza {
+  transition: 0.2s ease-in-out;
+}
 
 #rightside {
   border-left: 1px solid black;
@@ -74,7 +77,7 @@
 #rightside .underbox .box {
   text-align: center;
 }
-#rightside .underbox img {
+#rightside .underbox .box img {
   width: 15%;
 }
 #rightside .underbox .chefbox img {

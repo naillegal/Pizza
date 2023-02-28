@@ -8,19 +8,19 @@ function sizeHandler(e) {
     value = e.target.getAttribute("value")
     switch (value) {
         case "small":
-            pizza.style.width = 40 + "%"
-            pizza.style.height = 40 + "%"
+            pizza.style.width = '300px'
             break
         case "medium":
-            pizza.style.width = 50 + "%"
-            pizza.style.height = 50 + "%"
+            pizza.style.width = '450px'
             break
         case "large":
-            pizza.style.width = 60 + "%"
-            pizza.style.height = 60 + "%"
+            pizza.style.width = '600px'
             break
     }
 }
+
+
+
 const soundeffect = new Audio('soundeffect.mp3')
 const chefbox = document.querySelector('.chefbox')
 const sauce = document.querySelector('.sauce')
@@ -87,3 +87,74 @@ logo.onclick = function () {
         completedsound.play()
     }, 7000);
 }
+
+
+
+
+
+
+
+
+const ketchup = document.getElementById('ketchup');
+const ketchupImg = document.querySelector('#ketchup img');
+
+let currentDroppable = null;
+
+ketchup.onmousedown = function(event) {
+        console.log(event.target.currentSrc.substring(22));
+      let shiftX = event.clientX - ketchup.getBoundingClientRect().left;
+      let shiftY = event.clientY - ketchup.getBoundingClientRect().top;
+
+      ketchup.style.position = 'absolute';
+      ketchup.style.width='5%';
+      ketchup.style.zIndex = 1000;
+      document.body.append(ketchup);
+
+      moveAt(event.pageX, event.pageY);
+
+      function moveAt(pageX, pageY) {
+        ketchup.style.left = pageX - shiftX + 'px';
+        ketchup.style.top = pageY - shiftY + 'px';
+      }
+
+      function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+
+        ketchup.hidden = true;
+        let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+        ketchup.hidden = false;
+
+        if (!elemBelow) return;
+
+        let droppableBelow = elemBelow.closest('.droppable');
+        if (currentDroppable != droppableBelow) {
+          if (currentDroppable) { 
+            leaveDroppable(currentDroppable);
+          }
+          currentDroppable = droppableBelow;
+          if (currentDroppable) { 
+            enterDroppable(currentDroppable);
+          }
+        }
+      }
+
+      document.addEventListener('mousemove', onMouseMove);
+
+      ketchup.onmouseup = function() {
+        document.removeEventListener('mousemove', onMouseMove);
+        ketchup.onmouseup = null;
+      };
+
+    };
+
+    function enterDroppable(elem) {
+      elem.style.background = 'pink';
+    }
+
+    function leaveDroppable(elem) {
+      elem.style.background = '';
+    }
+
+    ketchup.ondragstart = function() {
+      return false;
+    };
