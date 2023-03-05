@@ -864,5 +864,266 @@ onion.ondragstart = function () {
 };
 
 
+const ketchup = document.getElementById('ketchup');
+const ketchupImg = document.querySelector('#ketchup img');
+const ketchupp = document.querySelector('#ketchup p')
 
 
+ketchup.onmousedown = function (event) {
+  console.log(event.target.currentSrc.substring(22));
+  let shiftX = event.clientX - ketchup.getBoundingClientRect().left;
+  let shiftY = event.clientY - ketchup.getBoundingClientRect().top;
+
+  ketchup.style.position = 'absolute';
+  ketchup.style.zIndex = 1000;
+  document.body.append(onion);
+  ketchupImg.style.width = '10%';
+  ketchupp.style.display = 'none';
+
+  moveAt(event.pageX, event.pageY);
+
+  function moveAt(pageX, pageY) {
+    ketchup.style.left = pageX - shiftX + 'px';
+    ketchup.style.top = pageY - shiftY + 'px';
+  }
+
+  function onMouseMove(event) {
+    moveAt(event.pageX, event.pageY);
+
+    ketchup.hidden = true;
+    let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+    ketchup.hidden = false;
+
+    if (!elemBelow) return;
+
+    let droppableBelow = elemBelow.closest('.droppable');
+    if (currentDroppable != droppableBelow) {
+      if (currentDroppable) {
+        leaveDroppable(currentDroppable);
+      }
+      currentDroppable = droppableBelow;
+      if (currentDroppable) {
+        enterDroppable(currentDroppable);
+      }
+    }
+  }
+
+  document.addEventListener('mousemove', onMouseMove);
+
+  ketchup.onmouseup = function () {
+    document.removeEventListener('mousemove', onMouseMove);
+    ketchup.onmouseup = null;
+  };
+
+};
+
+function enterDroppable(elem) {
+  elem.style.background = 'pink';
+}
+
+function leaveDroppable(elem) {
+  elem.style.background = '';
+}
+
+ketchup.ondragstart = function () {
+  return false;
+};
+
+
+const mayonnaise = document.getElementById('mayonnaise');
+const mayonnaiseImg = document.querySelector('#mayonnaise img');
+const mayonnaisep = document.querySelector('#mayonnaise p')
+
+
+mayonnaise.onmousedown = function (event) {
+  console.log(event.target.currentSrc.substring(22));
+  let shiftX = event.clientX - mayonnaise.getBoundingClientRect().left;
+  let shiftY = event.clientY - mayonnaise.getBoundingClientRect().top;
+
+  mayonnaise.style.position = 'absolute';
+  mayonnaise.style.zIndex = 1000;
+  document.body.append(onion);
+  mayonnaiseImg.style.width = '10%';
+  mayonnaisep.style.display = 'none';
+
+  moveAt(event.pageX, event.pageY);
+
+  function moveAt(pageX, pageY) {
+    mayonnaise.style.left = pageX - shiftX + 'px';
+    mayonnaise.style.top = pageY - shiftY + 'px';
+  }
+
+  function onMouseMove(event) {
+    moveAt(event.pageX, event.pageY);
+
+    mayonnaise.hidden = true;
+    let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+    mayonnaise.hidden = false;
+
+    if (!elemBelow) return;
+
+    let droppableBelow = elemBelow.closest('.droppable');
+    if (currentDroppable != droppableBelow) {
+      if (currentDroppable) {
+        leaveDroppable(currentDroppable);
+      }
+      currentDroppable = droppableBelow;
+      if (currentDroppable) {
+        enterDroppable(currentDroppable);
+      }
+    }
+  }
+
+  document.addEventListener('mousemove', onMouseMove);
+
+  mayonnaise.onmouseup = function () {
+    document.removeEventListener('mousemove', onMouseMove);
+    mayonnaise.onmouseup = null;
+  };
+
+};
+
+function enterDroppable(elem) {
+  elem.style.background = 'pink';
+}
+
+function leaveDroppable(elem) {
+  elem.style.background = '';
+}
+
+mayonnaise.ondragstart = function () {
+  return false;
+};
+
+
+const salt = document.getElementById('salt');
+const saltImg = document.querySelector('#salt img');
+const saltp = document.querySelector('#salt p')
+
+
+salt.onmousedown = function (event) {
+  console.log(event.target.currentSrc.substring(22));
+  let shiftX = event.clientX - salt.getBoundingClientRect().left;
+  let shiftY = event.clientY - salt.getBoundingClientRect().top;
+
+  salt.style.position = 'absolute';
+  salt.style.zIndex = 1000;
+  document.body.append(onion);
+  saltImg.style.width = '10%';
+  saltp.style.display = 'none';
+
+  moveAt(event.pageX, event.pageY);
+
+  function moveAt(pageX, pageY) {
+    salt.style.left = pageX - shiftX + 'px';
+    salt.style.top = pageY - shiftY + 'px';
+  }
+
+  function onMouseMove(event) {
+    moveAt(event.pageX, event.pageY);
+
+    mayonnaise.hidden = true;
+    let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+    salt.hidden = false;
+
+    if (!elemBelow) return;
+
+    let droppableBelow = elemBelow.closest('.droppable');
+    if (currentDroppable != droppableBelow) {
+      if (currentDroppable) {
+        leaveDroppable(currentDroppable);
+      }
+      currentDroppable = droppableBelow;
+      if (currentDroppable) {
+        enterDroppable(currentDroppable);
+      }
+    }
+  }
+
+  document.addEventListener('mousemove', onMouseMove);
+
+  salt.onmouseup = function () {
+    document.removeEventListener('mousemove', onMouseMove);
+    salt.onmouseup = null;
+  };
+
+};
+
+function enterDroppable(elem) {
+  elem.style.background = 'pink';
+}
+
+function leaveDroppable(elem) {
+  elem.style.background = '';
+}
+
+salt.ondragstart = function () {
+  return false;
+};
+
+
+
+const blackpepper = document.getElementById('blackpepper');
+const blackpepperImg = document.querySelector('#blackpepper img');
+const blackpepperp = document.querySelector('#blackpepper p')
+
+
+blackpepper.onmousedown = function (event) {
+  console.log(event.target.currentSrc.substring(22));
+  let shiftX = event.clientX - blackpepper.getBoundingClientRect().left;
+  let shiftY = event.clientY - blackpepper.getBoundingClientRect().top;
+
+  blackpepper.style.position = 'absolute';
+  blackpepper.style.zIndex = 1000;
+  document.body.append(onion);
+  blackpepperImg.style.width = '10%';
+  blackpepperp.style.display = 'none';
+
+  moveAt(event.pageX, event.pageY);
+
+  function moveAt(pageX, pageY) {
+    blackpepper.style.left = pageX - shiftX + 'px';
+    blackpepper.style.top = pageY - shiftY + 'px';
+  }
+
+  function onMouseMove(event) {
+    moveAt(event.pageX, event.pageY);
+
+    blackpepper.hidden = true;
+    let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+    blackpepper.hidden = false;
+
+    if (!elemBelow) return;
+
+    let droppableBelow = elemBelow.closest('.droppable');
+    if (currentDroppable != droppableBelow) {
+      if (currentDroppable) {
+        leaveDroppable(currentDroppable);
+      }
+      currentDroppable = droppableBelow;
+      if (currentDroppable) {
+        enterDroppable(currentDroppable);
+      }
+    }
+  }
+
+  document.addEventListener('mousemove', onMouseMove);
+
+  blackpepper.onmouseup = function () {
+    document.removeEventListener('mousemove', onMouseMove);
+    blackpepper.onmouseup = null;
+  };
+
+};
+
+function enterDroppable(elem) {
+  elem.style.background = 'pink';
+}
+
+function leaveDroppable(elem) {
+  elem.style.background = '';
+}
+
+blackpepper.ondragstart = function () {
+  return false;
+};
