@@ -89,6 +89,10 @@ logo.onclick = function () {
   redpepper.style.display = 'none'
   tomato.style.display = 'none'
   onion.style.display = 'none'
+  ketchup.style.display = 'none'
+  mayonnaise.style.display = 'none'
+  salt.style.display = 'none'
+  blackpepper.style.display = 'none'
   couriersound.play()
   setTimeout(() => {
     courier.style.display = 'block'
